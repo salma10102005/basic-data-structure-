@@ -25,24 +25,21 @@ class mystack
         return v.empty();
     }
 };
-
 int main()
 {
     mystack st;
-    // int n;
-    // for(int i = 0; i<n ; i++)
-    // {
-    //     int x;
-    //     cin >> x;
-    //     st.push(x);
-    // }
-    st.push(10);
-    st.push(20);
-    st.push(30);
-    cout<< st.top() << endl;
-    st.pop(); // shbcheye uporer value ta delet hoye jabe
-    cout<< st.top() << endl;
-    if(st.empty() == false)
-         cout<< st.top() << endl;
+    int n;
+    cin >> n;
+    for(int i = 0; i<n ; i++)
+    {
+        int x;
+        cin >> x;
+        st.push(x);
+    }
+    while( !st.empty())
+    {
+        cout << st.top() << endl;
+        st.pop();
+    }
     return 0;
 }
